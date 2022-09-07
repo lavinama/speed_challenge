@@ -1,0 +1,4 @@
+# Don't upload data to github
+data/train/
+data/trainbright/
+data/trainoptical/
