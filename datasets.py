@@ -10,6 +10,11 @@ class imageDataset(Dataset):
 	A custom PyTorch dataset that can be fed into a DataLoader.
 	"""
 	def __init__(self, dataframe: pd.DataFrame, root_dir: str, transform=None):
+		"""
+		:param dataframe: dataframe with respective label
+		:param root_dir: location of image dataset
+		:param transform: function
+		"""
 		self.dataframe = dataframe
 		self.root_dir = root_dir
 		self.transform=transform

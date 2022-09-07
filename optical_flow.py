@@ -10,14 +10,8 @@ import pandas as pd
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 
-if not os.path.exists('./train/'):
-	os.makedirs('./train/')
-if not os.path.exists('./trainbright/'):
-	os.makedirs('./trainbright')
-if not os.path.exists('./trainoptical/'):
-	os.makedirs('./trainoptical')
 def load(dataframe,root_dir,idx, transform):
-	#label = dataframe.label.values[idx]
+	# label = dataframe.label.values[idx]
 	im = mpimg.imread(f'{root_dir}/frame{dataframe.frame.values[idx]}.jpg')
 	return im
 

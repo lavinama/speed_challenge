@@ -14,7 +14,7 @@ def load_data_labels(filename: str) -> pd.DataFrame:
 	:return: dataframe with frame and label
 	"""
 	# Load the labels into python with using a pandas DataFrame
-	data = pd.read_csv(filename, sep=" ", header=None)
+	data = pd.read_csv(filename, sep=",", header=None)
 	# keep track of what frame corresponds to what speed
 	data['frame'] = data.index
 	# name the speed column "label"
@@ -23,7 +23,6 @@ def load_data_labels(filename: str) -> pd.DataFrame:
 	data = data[['frame','label']]
 	# return the dataFrame object
 	return data
-
 
 def video_to_frames(video: str, destination='data') -> str:
 	"""Turn video to frames

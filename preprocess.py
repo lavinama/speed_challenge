@@ -6,10 +6,15 @@ MACHINE = "Mac"
 def preprocess_data(data_folder_path):
 	train_video = data_folder_path + "train.mp4"
 	# Turn video to frames
-	# train_path = video_to_frames(train_video)
+	train_path = video_to_frames(train_video)
 	enhance_frames(train_path='data/train', destination="data")
 
-
+def label_data(data_folder_path):
+	# TODO:
+		# 1. Load train.txt data and turn into a dataframe
+		# 2. Add as first column the frame number (line number of txt file)
+		# 3. Add as second column the label (speed of car)
+	pass
 
 if __name__ == "__main__":
 	# command argument parser
